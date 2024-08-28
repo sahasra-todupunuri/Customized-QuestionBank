@@ -1,0 +1,71 @@
+\question   The following bar chart shows the number of buildings present (in lakh) in four different cities Hyderabad, Chennai, Delhi and Mumbai in three different years.  The percentage increase in number of buildings in Chennai from 2010 to 2011 is about?
+
+\begin{tikzpicture}
+        \begin{axis}[
+            ybar,
+            width=0.45\textwidth,
+            height=0.5\textwidth,
+            bar width = 2mm,
+            ymin=0,
+            ymax=100,
+            ymajorgrids=true,
+            yminorgrids=true,
+            minor grid style={dashed,black!40},
+            xlabel={Cities},
+            ylabel={Number of buildings (in lakh)},
+            symbolic x coords={Hyderabad, Chennai, Delhi, Mumbai},
+            xtick=data,
+            legend style={at={(0.5,-0.15)},
+                anchor=north,legend columns=-1},
+            extra y ticks={10,20,...,90}, % specifying minor ticks
+            minor tick num=9, % number of minor ticks between major ticks
+            ]
+            \addplot[fill=blue!50] coordinates {(Hyderabad,--s1--) (Chennai,--s2--) (Delhi,--s3--) (Mumbai,--s4--)};
+            \addplot[fill=red!50] coordinates {(Hyderabad,--t1--) (Chennai,--t2--) (Delhi,--t3--) (Mumbai,--t4--)};
+            \addplot[fill=green!50] coordinates {(Hyderabad,--f1--) (Chennai,--f2--) (Delhi,--f3--) (Mumbai,--f4--)};
+            \legend{2010, 2011, 2012}
+        \end{axis}
+    \end{tikzpicture}
+    
+\begin{randomizechoices}
+\correctchoice --q1cc-- 
+\choice --q1wc1--  
+\choice --q1wc2-- 
+\choice --q1wc3-- 
+\end{randomizechoices}
+
+\question   What is ratio of the number of buildings in Chennai in 2011 and the number of buildings in Mumbai in 2012 together to the number of buildings in Hyderabad in 2010?
+
+\begin{randomizechoices}
+\correctchoice --q2cc-- 
+\choice --q2wc1--  
+\choice --q2wc2-- 
+\choice --q2wc3-- 
+\end{randomizechoices}
+
+\question   Which of the four cities has recorded the maximum percentage growth in number of buildings from 2010 to 2011?
+
+\begin{randomizechoices}
+\correctchoice --q3cc-- 
+\choice --q3wc1--  
+\choice --q3wc2-- 
+\choice --q3wc3-- 
+\end{randomizechoices}
+
+\question   The difference between the average number of buildings in all four cities in 2011 and average number of buildings in all four cities in 2012 is
+
+\begin{randomizechoices}
+\correctchoice --q4cc-- 
+\choice --q4wc1--  
+\choice --q4wc2-- 
+\choice --q4wc3-- 
+\end{randomizechoices}
+
+\question   If a stacked bar chart is created to show the total number of buildings (in lakh) in the years 2010, 2011, and 2012 for each city (Hyderabad, Chennai, Delhi, Mumbai), what would be the percentage of bar that is occupied by Hyderabad in the year 2012?
+
+\begin{randomizechoices}
+\correctchoice --q5cc-- 
+\choice --q5wc1--  
+\choice --q5wc2-- 
+\choice --q5wc3-- 
+\end{randomizechoices}

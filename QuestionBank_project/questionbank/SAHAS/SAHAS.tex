@@ -1,0 +1,71 @@
+\question   Given bar graph shows percentage distribution of dresses designed by four designers (P, Q, R and S) and percentage of dresses delivered by these four designers out of total dresses designed by each.  Total dresses designed by all four designers together is 4000. Read the data carefully and answer the questions.  Find the difference between total undelivered dresses by P and S together and total delivered dresses by R?
+
+\begin{tikzpicture}
+        \begin{axis}[
+            ybar,
+            width=8cm,
+            height=8cm,
+            ylabel={Percentage (\%)},
+            xlabel={Designers},
+            ymin=0,
+            ymax=100,
+            xtick=data,
+            xticklabels={P, Q, R, S},
+            nodes near coords,
+            nodes near coords align={vertical},
+            legend pos=north east,
+            legend style={cells={anchor=west}},
+            ]
+            
+            % Dresses designed by designers
+            \addplot coordinates {(1, --s1--) (2, --s2--) (3, --s3--) (4, --s4--)};
+            \addlegendentry{Dresses Designed (\%)}
+            
+            % Dresses delivered by designers
+            \addplot coordinates {(1, --t1--) (2, --t2--) (3, --t3--) (4, --t4--)};
+            \addlegendentry{Dresses Delivered (\%)}
+        \end{axis}
+    \end{tikzpicture}
+    
+\begin{randomizechoices}
+\correctchoice --q1cc-- 
+\choice --q1wc1--  
+\choice --q1wc2-- 
+\choice --q1wc3-- 
+\end{randomizechoices}
+
+\question   If total dresses delivered by designer T are 10\% more than total dresses delivered by Q and designer T delivered 40\% of its total designed dresses, then find difference between total dresses designed by T and total dresses designed by R?
+
+\begin{randomizechoices}
+\correctchoice --q2cc-- 
+\choice --q2wc1--  
+\choice --q2wc2-- 
+\choice --q2wc3-- 
+\end{randomizechoices}
+
+\question   Find average number of delivered dresses by Q,R,S?
+
+\begin{randomizechoices}
+\correctchoice --q3cc-- 
+\choice --q3wc1--  
+\choice --q3wc2-- 
+\choice --q3wc3-- 
+\end{randomizechoices}
+
+\question   Find ratio of total dresses delivered by P and R together to total dresses delivered by Q?
+
+\begin{randomizechoices}
+\correctchoice --q4cc-- 
+\choice --q4wc1--  
+\choice --q4wc2-- 
+\choice --q4wc3-- 
+\end{randomizechoices}
+
+\question   If total dresses delivered by Dealer U is 100\% more than total undelivered dresses by S and U delivered 30\% of total designed dresses, then find undelivered dresses by U are what percent of delivered dresses by P?
+
+\begin{randomizechoices}
+\correctchoice --q5cc-- 
+\choice --q5wc1--  
+\choice --q5wc2-- 
+\choice --q5wc3-- 
+\end{randomizechoices}

@@ -1,0 +1,353 @@
+
+\documentclass{exam}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\usetikzlibrary{patterns}
+\usepackage{circuitikz}
+\ctikzset{bipoles/length=0.8cm}
+\usepackage{tikz,lipsum,lmodern}
+\usepackage[most]{tcolorbox}
+\usepackage{pgfplots}
+\renewcommand{\baselinestretch}{1.4}
+\definecolor{foo}{HTML}{98777B}
+\definecolor{foa}{HTML}{FF5733}
+\definecolor{dcm}{HTML}{AA967E}
+\setlength\columnsep{20pt}
+\usepackage{exam-randomizechoices}
+\usepackage{pgfbaseshapes}
+\usepackage{geometry}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{wrapfig}
+\usepackage{afterpage}
+\usepackage{enumerate}
+
+\printanswers
+\begin{document}
+\newgeometry{left=1.5cm,bottom=2cm,right=1.5cm, top=2cm}
+\begin{tcolorbox}[colupper=white, arc=0mm, height=4cm,valign=center, halign=center,
+enlarge left by=-1.5cm, enlarge top by=-2cm, width=\linewidth+3cm,
+colback=dcm, colframe=white]
+  {\sffamily \huge IDP Questions Creation}
+\end{tcolorbox}
+\begin{tcolorbox}[arc=0mm, height=1.5cm, valign=center, enlarge top by= -3.2cm, enlarge left by=-1cm, width=\linewidth+2cm, colback=white!90!black, colframe=white]
+  \flushleft {\sffamily \large \hspace{1cm} Name: \hfill Roll no: \hfill Code : WFYXEQZZWR \hspace{2cm}}
+\end{tcolorbox}
+\begin{multicols}{2}
+\begin{questions}
+\section{Data Interpretation}\question   The following bar chart shows the number of buildings present (in lakh) in four different cities Hyderabad, Chennai, Delhi and Mumbai in three different years.  The percentage increase in number of buildings in Chennai from 2010 to 2011 is about?
+
+\begin{tikzpicture}
+        \begin{axis}[
+            ybar,
+            width=0.45\textwidth,
+            height=0.5\textwidth,
+            bar width = 2mm,
+            ymin=0,
+            ymax=100,
+            ymajorgrids=true,
+            yminorgrids=true,
+            minor grid style={dashed,black!40},
+            xlabel={Cities},
+            ylabel={Number of buildings (in lakh)},
+            symbolic x coords={Hyderabad, Chennai, Delhi, Mumbai},
+            xtick=data,
+            legend style={at={(0.5,-0.15)},
+                anchor=north,legend columns=-1},
+            extra y ticks={10,20,...,90}, % specifying minor ticks
+            minor tick num=9, % number of minor ticks between major ticks
+            ]
+            \addplot[fill=blue!50] coordinates {(Hyderabad,44) (Chennai,42) (Delhi,56) (Mumbai,70)};
+            \addplot[fill=red!50] coordinates {(Hyderabad,54) (Chennai,50) (Delhi,66) (Mumbai,84)};
+            \addplot[fill=green!50] coordinates {(Hyderabad,66) (Chennai,64) (Delhi,84) (Mumbai,92)};
+            \legend{2010, 2011, 2012}
+        \end{axis}
+    \end{tikzpicture}
+    
+\begin{randomizechoices}
+\correctchoice 19.05\% 
+\choice 21.05\%  
+\choice 22.22\% 
+\choice 27.27\% 
+\end{randomizechoices}
+
+\question   What is ratio of the number of buildings in Chennai in 2011 and the number of buildings in Mumbai in 2012 together to the number of buildings in Hyderabad in 2010?
+
+\begin{randomizechoices}
+\correctchoice 71 : 22 
+\choice 30 : 11  
+\choice 79 : 32 
+\choice 32 : 23 
+\end{randomizechoices}
+
+\question   Which of the four cities has recorded the maximum percentage growth in number of buildings from 2010 to 2011?
+
+\begin{randomizechoices}
+\correctchoice Hyderabad 
+\choice Chennai  
+\choice Delhi 
+\choice Mumbai 
+\end{randomizechoices}
+
+\question   The difference between the average number of buildings in all four cities in 2011 and average number of buildings in all four cities in 2012 is
+
+\begin{randomizechoices}
+\correctchoice 1,300,000 
+\choice 1,300,200  
+\choice 1,299,920 
+\choice 1,300,100 
+\end{randomizechoices}
+
+\question   If a stacked bar chart is created to show the total number of buildings (in lakh) in the years 2010, 2011, and 2012 for each city (Hyderabad, Chennai, Delhi, Mumbai), what would be the percentage of bar that is occupied by Hyderabad in the year 2012?
+
+\begin{randomizechoices}
+\correctchoice 21.6\% 
+\choice 20.9\%  
+\choice 27.5\% 
+\choice 30.1\% 
+\end{randomizechoices}\begin{tcolorbox}[colback=yellow!15!white, colframe=brown!80!white, title=Data,arc=0pt]
+A spaceship's interior is being redesigned. All compartments are cuboid-shaped (meaning length, width, and height are all rectangular). The redesign project involves a relaxation lounge measuring 12 meters by 12 meters, a captain's quarters measuring 6 meters by 8 meters, an engine room measuring 6 meters by 8 meters, a docking bay measuring 24 meters by 26 meters, and a main bridge measuring 30 meters by 44 meters. The total internal volume of the spaceship is 4364 cubic meters.  Two types of wall paneling are available: a sleek, metallic option and a plush, sound-dampening material. The metallic paneling costs 128 credits per square meter, while the sound-dampening material costs 260 credits per square meter.  The relaxation lounge, captain's quarters, and main bridge will be outfitted with sound-dampening panels for optimal comfort and communication. The docking bay and engine room will utilize the metallic panels for durability and ease of maintenance.  Paneling is done for only ceiling and flooring if whole room area is considered we should include all 4 walls too.
+\tcblower
+Please answer the following questions.
+\end{tcolorbox}
+
+\question  What is the total area (in square meters) of the walls in the relaxation lounge, captain's quarters, and main bridge combined, considering they will be outfitted with sound-dampening panels?
+
+\begin{randomizechoices}
+\correctchoice 3024 
+\choice 3022  
+\choice 3027 
+\choice 1512 
+\end{randomizechoices}
+
+\question    What is the total cost (in credits) of outfitting the docking bay and engine rooms with metallic panelling?
+
+\begin{randomizechoices}
+\correctchoice 172032 
+\choice 172030  
+\choice 57344 
+\choice 86016 
+\end{randomizechoices}
+
+\question   By how much is the total area (in square meters) of the relaxation lounge's floor greater than the total area of the captain's quarters' floor?
+
+\begin{randomizechoices}
+\correctchoice 96 
+\choice 94  
+\choice 32 
+\choice 48 
+\end{randomizechoices}
+
+\question   What is the total cost (in credits) of outfitting the entire spaceship with panels?
+
+\begin{randomizechoices}
+\correctchoice 958272 
+\choice 958270  
+\choice 319424 
+\choice 479136 
+\end{randomizechoices}
+
+\question   What is the percentage of the relaxation lounge's floor area relative to the total internal volume of the spaceship?
+
+\begin{randomizechoices}
+\correctchoice 3.30\% 
+\choice 1.30\%  
+\choice 6.30\% 
+\choice 5.30\% 
+\end{randomizechoices}\question   Study the following graph carefully to answer the questions that follow.
+This graph basically represents number of employees recurited (in thousand) in three different companies in six different years.  What is the average number of employees recruited in the Oracle over all the years together.
+
+\begin{tikzpicture}
+    \begin{axis}[
+        ybar,
+        width=9cm,
+        height=8cm,
+        ylabel={Number of Employees Recruited (in thousands)},
+        xlabel={Years},
+        ymin=0,
+        ymax=100,
+        xtick=data,
+        xticklabels={2016, 2017, 2018, 2019, 2020, 2021},
+        nodes near coords,
+        nodes near coords align={vertical},
+        legend pos=north west,
+        legend style={cells={anchor=west}},
+        bar width=3mm,
+    ]
+    
+    % Company A recruitment
+    \addplot[pattern=dots, pattern color=blue!50!black] coordinates {
+        (1, 17)
+        (2, 20)
+        (3, 45)
+        (4, 27)
+        (5, 72)
+        (6, 89)
+    };
+    \addlegendentry{Google}
+    
+    % Company B recruitment
+    \addplot[pattern=crosshatch dots, pattern color=red!50!black] coordinates {
+        (1, 10)
+        (2, 19)
+        (3, 19)
+        (4, 45)
+        (5, 47)
+        (6, 81)
+    };
+    \addlegendentry{Microsoft}
+    
+    % Company C recruitment
+    \addplot[pattern=north east lines, pattern color=green!50!black] coordinates {
+        (1, 5)
+        (2, 11)
+        (3, 15)
+        (4, 26)
+        (5, 33)
+        (6, 42)
+    };
+    \addlegendentry{Oracle}
+    
+    \end{axis}
+\end{tikzpicture}
+    
+\begin{randomizechoices}
+\correctchoice 22,000 
+\choice 22,020  
+\choice 10,333 
+\choice 27,333 
+\end{randomizechoices}
+
+\question   Number of employees recruited in Oracle in year 2020 is what percentage of number of employees recruited in Google in year 2017?
+
+\begin{randomizechoices}
+\correctchoice 165.00\% 
+\choice 167.00\%  
+\choice 130.00\% 
+\choice 135.00\% 
+\end{randomizechoices}
+
+\question   If 30\% of employees recurited in Microsoft in 2021 was female, what is the number of males recurited in Microsoft in that year?
+
+\begin{randomizechoices}
+\correctchoice 56,700 
+\choice 57,700  
+\choice 13,300 
+\choice 31,500 
+\end{randomizechoices}
+
+\question   What was the respective ratio between the number of employees recruited for Microsoft in 2016 and the number of employees recruited in Google in 2020?
+
+\begin{randomizechoices}
+\correctchoice 5 : 36 
+\choice 5 : 18  
+\choice 36 : 5 
+\choice 2 : 9 
+\end{randomizechoices}
+
+\question   If a pie chart is to be created showing the total recruitments by each company in the six years, then the angle occupied by Microsoft in degrees will be?
+
+\begin{randomizechoices}
+\correctchoice 127.7$^\circ$ 
+\choice 156.0$^\circ$  
+\choice 76.3$^\circ$ 
+\choice 197.9$^\circ$ 
+\end{randomizechoices}\question   Given bar graph shows percentage distribution of dresses designed by four designers (P, Q, R and S) and percentage of dresses delivered by these four designers out of total dresses designed by each.  Total dresses designed by all four designers together is 4000. Read the data carefully and answer the questions.  Find the difference between total undelivered dresses by P and S together and total delivered dresses by R?
+
+\begin{tikzpicture}
+        \begin{axis}[
+            ybar,
+            width=8cm,
+            height=8cm,
+            ylabel={Percentage (\%)},
+            xlabel={Designers},
+            ymin=0,
+            ymax=100,
+            xtick=data,
+            xticklabels={P, Q, R, S},
+            nodes near coords,
+            nodes near coords align={vertical},
+            legend pos=north east,
+            legend style={cells={anchor=west}},
+            ]
+            
+            % Dresses designed by designers
+            \addplot coordinates {(1, 20) (2, 38) (3, 39) (4, 23)};
+            \addlegendentry{Dresses Designed (\%)}
+            
+            % Dresses delivered by designers
+            \addplot coordinates {(1, 19) (2, 11) (3, 33) (4, 16)};
+            \addlegendentry{Dresses Delivered (\%)}
+        \end{axis}
+    \end{tikzpicture}
+    
+\begin{randomizechoices}
+\correctchoice 1000.00 
+\choice 1001.00  
+\choice 999.00 
+\choice 1003.00 
+\end{randomizechoices}
+
+\question   If total dresses delivered by designer T are 10\% more than total dresses delivered by Q and designer T delivered 40\% of its total designed dresses, then find difference between total dresses designed by T and total dresses designed by R?
+
+\begin{randomizechoices}
+\correctchoice 350.00 
+\choice 351.00  
+\choice 349.00 
+\choice 353.00 
+\end{randomizechoices}
+
+\question   Find average number of delivered dresses by Q,R,S?
+
+\begin{randomizechoices}
+\correctchoice 800.00 
+\choice 801.00  
+\choice 799.00 
+\choice 803.00 
+\end{randomizechoices}
+
+\question   Find ratio of total dresses delivered by P and R together to total dresses delivered by Q?
+
+\begin{randomizechoices}
+\correctchoice 4.73 
+\choice 5.73  
+\choice 3.73 
+\choice 7.73 
+\end{randomizechoices}
+
+\question   If total dresses delivered by Dealer U is 100\% more than total undelivered dresses by S and U delivered 30\% of total designed dresses, then find undelivered dresses by U are what percent of delivered dresses by P?
+
+\begin{randomizechoices}
+\correctchoice 171.93\% 
+\choice 172.93\%  
+\choice 170.93\% 
+\choice 174.93\% 
+\end{randomizechoices}\question   In a series circuit with a 8V battery and a resistor of 2 $\Omega$, what is the power dissipated by the resistor?
+
+\begin{randomizechoices}
+\correctchoice 32.000 
+\choice 33.000  
+\choice 31.000 
+\choice 30.000 
+\end{randomizechoices}
+
+\question The runs scored by a batsman in 5 ODIs are 30, 53, 17, 119, and 106. The standard deviation is
+
+
+\begin{randomizechoices}
+\correctchoice 40.669 
+\choice 41.669  
+\choice 65.000 
+\choice data insufficient 
+\end{randomizechoices}
+
+
+\end{questions}
+\end{multicols}
+\centering{* * * All the Best * * *}
+\printkeytable	  
+\end{document}
+\writekeylist

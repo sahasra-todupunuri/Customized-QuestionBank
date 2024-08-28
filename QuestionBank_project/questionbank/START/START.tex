@@ -1,0 +1,99 @@
+\question   Study the following graph carefully to answer the questions that follow.
+This graph basically represents number of employees recurited (in thousand) in three different companies in six different years.  What is the average number of employees recruited in the Oracle over all the years together.
+
+\begin{tikzpicture}
+    \begin{axis}[
+        ybar,
+        width=9cm,
+        height=8cm,
+        ylabel={Number of Employees Recruited (in thousands)},
+        xlabel={Years},
+        ymin=0,
+        ymax=100,
+        xtick=data,
+        xticklabels={2016, 2017, 2018, 2019, 2020, 2021},
+        nodes near coords,
+        nodes near coords align={vertical},
+        legend pos=north west,
+        legend style={cells={anchor=west}},
+        bar width=3mm,
+    ]
+    
+    % Company A recruitment
+    \addplot[pattern=dots, pattern color=blue!50!black] coordinates {
+        (1, --s1--)
+        (2, --s2--)
+        (3, --s3--)
+        (4, --s4--)
+        (5, --s5--)
+        (6, --s6--)
+    };
+    \addlegendentry{Google}
+    
+    % Company B recruitment
+    \addplot[pattern=crosshatch dots, pattern color=red!50!black] coordinates {
+        (1, --t1--)
+        (2, --t2--)
+        (3, --t3--)
+        (4, --t4--)
+        (5, --t5--)
+        (6, --t6--)
+    };
+    \addlegendentry{Microsoft}
+    
+    % Company C recruitment
+    \addplot[pattern=north east lines, pattern color=green!50!black] coordinates {
+        (1, --f1--)
+        (2, --f2--)
+        (3, --f3--)
+        (4, --f4--)
+        (5, --f5--)
+        (6, --f6--)
+    };
+    \addlegendentry{Oracle}
+    
+    \end{axis}
+\end{tikzpicture}
+    
+\begin{randomizechoices}
+\correctchoice --q1cc-- 
+\choice --q1wc1--  
+\choice --q1wc2-- 
+\choice --q1wc3-- 
+\end{randomizechoices}
+
+\question   Number of employees recruited in Oracle in year 2020 is what percentage of number of employees recruited in Google in year 2017?
+
+\begin{randomizechoices}
+\correctchoice --q2cc-- 
+\choice --q2wc1--  
+\choice --q2wc2-- 
+\choice --q2wc3-- 
+\end{randomizechoices}
+
+\question   If 30\% of employees recurited in Microsoft in 2021 was female, what is the number of males recurited in Microsoft in that year?
+
+\begin{randomizechoices}
+\correctchoice --q3cc-- 
+\choice --q3wc1--  
+\choice --q3wc2-- 
+\choice --q3wc3-- 
+\end{randomizechoices}
+
+\question   What was the respective ratio between the number of employees recruited for Microsoft in 2016 and the number of employees recruited in Google in 2020?
+
+\begin{randomizechoices}
+\correctchoice --q4cc-- 
+\choice --q4wc1--  
+\choice --q4wc2-- 
+\choice --q4wc3-- 
+\end{randomizechoices}
+
+\question   If a pie chart is to be created showing the total recruitments by each company in the six years, then the angle occupied by Microsoft in degrees will be?
+
+\begin{randomizechoices}
+\correctchoice --q5cc-- 
+\choice --q5wc1--  
+\choice --q5wc2-- 
+\choice --q5wc3-- 
+\end{randomizechoices}
